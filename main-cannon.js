@@ -166,8 +166,6 @@ function updateHandlePosition() {
 }
 
 function animate() {
-  requestAnimationFrame(animate);
-
   world.fixedStep();
 
   updateHandlePosition();
@@ -192,4 +190,4 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-animate();
+renderer.setAnimationLoop(animate);
